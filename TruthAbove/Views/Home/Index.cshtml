@@ -1,0 +1,29 @@
+﻿@using TruthAbove.Models
+
+@model SearchOptions
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+<div class="row">
+    <div class="col-md-12" style="text-align:center;">
+        <img src="~/Content/Images/outthere.jpg" />
+
+        <div class="addSighting">
+            <button type="button" class="btn btn-info btn-lg " data-target="#addSightingModal">Add Sighting</button>
+        </div>
+
+        @Html.Partial("Search", @Model)
+
+        @Html.Partial("AddSighting", @Model)
+
+        <table id="sightingsTable"></table>
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/Scripts/Sightings.js"></script>
+}

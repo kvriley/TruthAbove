@@ -1,0 +1,19 @@
+﻿
+@using TruthAbove.Models
+
+@model SearchOptions 
+
+<div class="searchControls">
+    <table border="0" cellspacing="5" cellpadding="5">
+        <tbody>
+            <tr>
+                <td class="filler"/>
+
+                <td style="text-align:left;">States:</td>
+                <td>@Html.DropDownList("searchState", @Model.States, new { @onchange = "filterSightings(this);" })</td>
+                <td>Shapes:</td>
+                <td style="text-align:left;">@Html.DropDownList("searchShape", @Model.Shapes, new { @onchange = "filterSightings(this);" })</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
